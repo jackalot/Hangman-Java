@@ -3,6 +3,6 @@
 our methods that reveal and store our methods
 2. Create a list of possible words to use for this round
 3. Censor the word we got from
- step 3. (IE: _ _ _ _ _ _ _ _  _ _ _  _ _ _ _ 
+ step 3. (IE: _ _ _ _ _ _ _ _	 _ _ _   _ _ _ _
  instead of banana's are good)
 Display the censored word
