@@ -2,6 +2,8 @@
 public class Start {
 	public static void main(String[] args)
 	{
-		System.out.print("hello world");
+		HiddenText test = new HiddenText();
+		
+		System.out.print(test.text);
 	}
 }
