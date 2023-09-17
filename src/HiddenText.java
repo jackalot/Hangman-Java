@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 public class HiddenText {
-	 String text = "Sample text";
+	 String OurWord = "Sample text";
 	 private List<String> FindTheFile() {
 		 List<String> StoredWords = new ArrayList<String>();
 		 try
@@ -28,13 +28,13 @@ public class HiddenText {
 		 List<String> StoredWords = FindTheFile();
 		 //Store our ArrayList in a regular Array, according to the list size
 		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
-		 text = PossibleWords[(int)(Math.random() * PossibleWords.length)];
+		 OurWord = PossibleWords[(int)(Math.random() * PossibleWords.length)];
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
 		 FindNewWord();
 		 //Hide our text with the format chosen
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ _
-		 return text;
+		 return OurWord;
 	 }
 }
