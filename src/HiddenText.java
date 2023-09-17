@@ -30,6 +30,9 @@ public class HiddenText {
 		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
 		 OurWord = PossibleWords[(int)(Math.random() * PossibleWords.length)];
 	 }
+	 private void CensorWord() {
+		 
+	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
 		 FindNewWord();
