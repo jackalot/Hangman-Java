@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 public class HiddenText {
 	 String OurWord = "Sample text";
+	 String HiddenWord = "";
 	 private List<String> FindTheFile() {
 		 List<String> StoredWords = new ArrayList<String>();
 		 try
