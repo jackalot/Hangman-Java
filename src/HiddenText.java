@@ -39,6 +39,10 @@ public class HiddenText {
 			{	
 				HiddenWord += "_ ";
 			}
+			else
+			{
+				HiddenWord += "\n";
+			}
 		}
 	 }
 	 public String HideOurText() {
@@ -47,8 +51,8 @@ public class HiddenText {
 		 //Hide our text with the format chosen
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
 		 CensorWord();
-		 System.out.print(OurWord);
-		 System.out.print(HiddenWord);
+		 System.out.println(OurWord);
+		 System.out.println(HiddenWord);
 		 return OurWord;
 	 }
 }
