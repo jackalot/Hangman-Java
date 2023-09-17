@@ -1,4 +1,6 @@
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 public class HiddenText {
 	 String text = "Sample text";
 	 // Finds a new word for us from the "Words to Hide" file 
