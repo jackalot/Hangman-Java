@@ -6,12 +6,12 @@ public class HiddenText {
 	 private void FindTheFile() {
 		 try
 		 {
-			 File wordObj = new File("WordsToHide.txt"); //Grab the file
+			 File wordObj = new File("src/WordsToHide"); //Grab the file
 			 Scanner myReader =  new Scanner(wordObj); //Start scanning it
 			 while(myReader.hasNextLine()) // while it has more lines to read
 			 {
 				 String data = myReader.nextLine(); // the next line gets stored to data
-				 System.out.print(data); // print it
+				 System.out.println(data); // print it
 			 }
 		 }
 		 catch (FileNotFoundException e){
