@@ -20,12 +20,11 @@ public class HiddenText {
 	 }
 	 // Finds a new word for us from the "Words to Hide" file 
 	 private void FindNewWord() {
-		 
-	 
+	 FindTheFile();
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
-		 
+		 FindNewWord();
 		 //Hide our text with the format chosen
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ _
 		 return text;
