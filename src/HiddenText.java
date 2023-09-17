@@ -15,6 +15,7 @@ public class HiddenText {
 			 {
 				 String data = myReader.nextLine(); // the next line gets stored to data
 				 System.out.println(data); // print it
+				 StoredWords.add(data);
 			 }
 			 myReader.close();
 		 }
