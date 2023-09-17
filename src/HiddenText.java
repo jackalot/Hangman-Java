@@ -31,14 +31,24 @@ public class HiddenText {
 		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
 		 OurWord = PossibleWords[(int)(Math.random() * PossibleWords.length)];
 	 }
+	 //Censor the "OurWord" Variable and store it in "HiddenWord"
 	 private void CensorWord() {
-		 
+		HiddenWord = ""; // Empty it just in case
+		for(char x: OurWord.toCharArray()) {
+			if(x != ' ')
+			{	
+				HiddenWord += "_ ";
+			}
+		}
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
 		 FindNewWord();
 		 //Hide our text with the format chosen
-		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ _
+		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
+		 CensorWord();
+		 System.out.print(OurWord);
+		 System.out.print(HiddenWord);
 		 return OurWord;
 	 }
 }
