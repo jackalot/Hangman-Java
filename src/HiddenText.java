@@ -3,6 +3,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class HiddenText {
 	 String text = "Sample text";
+	 private void FindTheFile() {
+		 
+	 }
 	 // Finds a new word for us from the "Words to Hide" file 
 	 private void FindNewWord() {
 		 try
