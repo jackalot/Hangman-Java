@@ -5,6 +5,13 @@ public class HiddenText {
 	 String text = "Sample text";
 	 // Finds a new word for us from the "Words to Hide" file 
 	 private void FindNewWord() {
+		 try
+		 {
+		 }
+		 catch (FileNotFoundException e){
+			System.out.print(e);
+		 }
+		 
 	 
 	 }
 	 public String HideOurText() {
