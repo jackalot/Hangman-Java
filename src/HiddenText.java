@@ -35,17 +35,23 @@ public class HiddenText {
 	 }
 	 //Censor the "OurWord" Variable and store it in "HiddenWord"
 	 private void CensorWord() {
-		HiddenWord = ""; // Empty it just in case
+		String newHiddenWord = "";
+		String newFormattedWord = ""; // Empty it just in case
 		for(char x: OurWord.toCharArray()) {
 			if(x != ' ')
 			{	
-				HiddenWord += "_ ";
+				newHiddenWord += "_ ";// add a space so its viewable for the user
+				newFormattedWord += x; // add the character and a space to mimic HiddenWord
+				newFormattedWord += " ";
 			}
 			else
 			{
-				HiddenWord += "\n";
+				newHiddenWord += "\n"; // Create a new line
+				newFormattedWord += "\n";
 			}
 		}
+		HiddenWord = newHiddenWord;
+		FormattedWord = newFormattedWord;
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
@@ -53,8 +59,8 @@ public class HiddenText {
 		 //Hide our text with the format chosen
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
 		 CensorWord();
-		 System.out.println(OurWord);
 		 System.out.println(HiddenWord);
+		 System.out.println(FormattedWord);
 		 return OurWord;
 	 }
 }
