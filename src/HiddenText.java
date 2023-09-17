@@ -1,9 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class HiddenText {
 	 String text = "Sample text";
 	 private void FindTheFile() {
+		 List<String> StoredWords = new ArrayList<String>();
 		 try
 		 {
 			 File wordObj = new File("src/WordsToHide"); //Grab the file
