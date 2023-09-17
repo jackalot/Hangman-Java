@@ -7,6 +7,8 @@ public class HiddenText {
 	 private void FindNewWord() {
 		 try
 		 {
+			 File wordObj = new File("Words to Hide"); //Grab the file
+			 Scanner myReader =  new Scanner(wordObj); //Start scanning it
 		 }
 		 catch (FileNotFoundException e){
 			System.out.print(e);
