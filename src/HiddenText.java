@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 public class HiddenText {
 	 String text = "Sample text";
-	 private void FindTheFile() {
+	 private List<String> FindTheFile() {
 		 List<String> StoredWords = new ArrayList<String>();
 		 try
 		 {
@@ -22,10 +22,11 @@ public class HiddenText {
 		 catch (FileNotFoundException e){
 			System.out.print(e);
 		 }
+		 return StoredWords;
 	 }
 	 // Finds a new word for us from the "Words to Hide" file 
 	 private void FindNewWord() {
-	 FindTheFile();
+		 FindTheFile();
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
