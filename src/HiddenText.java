@@ -14,7 +14,6 @@ public class HiddenText {
 			 while(myReader.hasNextLine()) // while it has more lines to read
 			 {
 				 String data = myReader.nextLine(); // the next line gets stored to data
-				 System.out.println(data); // print it
 				 StoredWords.add(data);
 			 }
 			 myReader.close();
@@ -30,7 +29,6 @@ public class HiddenText {
 		 //Store our ArrayList in a regular Array, according to the list size
 		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
 		 text = PossibleWords[(int)(Math.random() * PossibleWords.length)];
- 		 System.out.println(PossibleWords);
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide

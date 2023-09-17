@@ -4,6 +4,6 @@ public class Start {
 	{
 		HiddenText test = new HiddenText();
 		
-		System.out.print(test.HideOurText());
+		test.HideOurText();
 	}
 }
