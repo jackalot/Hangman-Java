@@ -29,6 +29,7 @@ public class HiddenText {
 		 List<String> StoredWords = FindTheFile();
 		 //Store our ArrayList in a regular Array, according to the list size
 		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
+		 text = PossibleWords[(int)(Math.random() * PossibleWords.length)];
  		 System.out.println(PossibleWords);
 	 }
 	 public String HideOurText() {
