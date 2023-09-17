@@ -27,7 +27,9 @@ public class HiddenText {
 	 // Finds a new word for us from the "Words to Hide" file 
 	 private void FindNewWord() {
 		 List<String> StoredWords = FindTheFile();
-		 System.out.println(StoredWords);
+		 //Store our ArrayList in a regular Array, according to the list size
+		 String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
+ 		 System.out.println(PossibleWords);
 	 }
 	 public String HideOurText() {
 		 //Find a new word to hide
