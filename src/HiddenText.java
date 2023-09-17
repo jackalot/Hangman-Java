@@ -6,7 +6,7 @@ public class HiddenText {
 	 private void FindTheFile() {
 		 try
 		 {
-			 File wordObj = new File("Words to Hide"); //Grab the file
+			 File wordObj = new File("WordsToHide.txt"); //Grab the file
 			 Scanner myReader =  new Scanner(wordObj); //Start scanning it
 			 while(myReader.hasNextLine()) // while it has more lines to read
 			 {
