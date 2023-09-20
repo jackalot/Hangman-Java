@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 public class HiddenText {
-	 String OurWord = "Sample text";
-	 String HiddenWord = "";
+	 private String OurWord = "Sample text";
+	 private String HiddenWord = "";
 	// This string will be a copy of OurWord but formatted like HiddenWord is
-	 String FormattedWord;
+	 private String FormattedWord;
 	 private List<String> FindTheFile() {
 		 List<String> StoredWords = new ArrayList<String>();
 		 try
@@ -53,7 +53,14 @@ public class HiddenText {
 		HiddenWord = newHiddenWord;
 		FormattedWord = newFormattedWord;
 	 }
-	 public void HideOurText() {
+	 
+	 public String GetHiddenWord() {
+		 return HiddenWord;
+	 }
+	 public String GetFormattedWord() {
+		 return FormattedWord;
+	 }
+public void HideOurText() {
 		 //Find a new word to hide
 		 FindNewWord();
 		 //Hide our text with the format chosen
