@@ -53,7 +53,7 @@ public class HiddenText {
 		HiddenWord = newHiddenWord;
 		FormattedWord = newFormattedWord;
 	 }
-	 public String HideOurText() {
+	 public void HideOurText() {
 		 //Find a new word to hide
 		 FindNewWord();
 		 //Hide our text with the format chosen
@@ -61,6 +61,5 @@ public class HiddenText {
 		 CensorWord();
 		 System.out.println(HiddenWord);
 		 System.out.println(FormattedWord);
-		 return OurWord;
 	 }
 }
