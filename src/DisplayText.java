@@ -1,7 +1,8 @@
 
 public class DisplayText {
-	public void CreateWindow()
+	public void CreateWindow(HiddenText OurWords)
 	{
-		
+		/*
+		 * */
 	}
 }
