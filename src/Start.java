@@ -2,8 +2,8 @@
 public class Start {
 	public static void main(String[] args)
 	{
-		HiddenText test = new HiddenText();
+		HiddenText OurWords = new HiddenText();
 		
-		test.HideOurText();
+		OurWords.HideOurText();
 	}
 }
