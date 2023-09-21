@@ -2,7 +2,10 @@ import javax.swing.*;
 public class DisplayText {
 	char[] Guesses;
 	String OurPrompt;
-	
+	public boolean CheckCharacter(char GuessChar, HiddenText OurWords)
+	{
+		 
+	}
 	public char GuessCharacter() {
 		// Grab the string input
 		String guessStr = JOptionPane.showInputDialog
