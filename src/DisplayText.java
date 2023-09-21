@@ -6,6 +6,9 @@ public class DisplayText {
 		// Grab the string input
 		String guessStr = JOptionPane.showInputDialog
 			    (OurPrompt);
+		// If a full word is guessed, instead grab the first letter
+	    char guessChar = guessStr.charAt(0);
+	    return guessChar;
 	}
 	public void CreateWindow(HiddenText OurWords)
 	{
