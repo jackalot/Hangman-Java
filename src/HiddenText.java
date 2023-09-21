@@ -66,7 +66,5 @@ public void HideOurText() {
 		 //Hide our text with the format chosen
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
 		 CensorWord();
-		 System.out.println(HiddenWord);
-		 System.out.println(FormattedWord);
 	 }
 }
