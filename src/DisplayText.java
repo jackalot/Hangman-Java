@@ -1,6 +1,9 @@
 
 public class DisplayText {
 	char[] Guesses;
+	public char GuessCharacter(HiddenText OurWords) {
+	return ' ';
+	}
 	public void CreateWindow(HiddenText OurWords)
 	{
 		
