@@ -2,7 +2,8 @@ import javax.swing.*;
 public class DisplayText {
 	char[] Guesses;
 	String OurPrompt;
-	public char GuessCharacter(HiddenText OurWords) {
+	
+	public char GuessCharacter() {
 		// Grab the string input
 		String guessStr = JOptionPane.showInputDialog
 			    (OurPrompt);
@@ -18,7 +19,7 @@ public class DisplayText {
 					OurWords.GetHiddenWord();
 		}
 		 // prompt the user for a character they think is in the word
-		char GuessChar = GuessCharacter(OurWords);
+		char GuessChar = GuessCharacter();
 		System.out.print(GuessChar);
 		// check if the character is in the word
 		 // If it was right, add the players guess
