@@ -5,5 +5,6 @@ public class Start {
 		HiddenText OurWords = new HiddenText();
 		OurWords.HideOurText();
 		DisplayText Display = new DisplayText();
+		Display.CreateWindow(OurWords);
 	}
 }
