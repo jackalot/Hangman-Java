@@ -4,6 +4,7 @@ public class DisplayText {
 	String OurPrompt;
 	public boolean CheckCharacter(char GuessChar, HiddenText OurWords)
 	{
+		
 		 return false;
 	}
 	public char GuessCharacter() {
@@ -24,7 +25,7 @@ public class DisplayText {
 		 // prompt the user for a character they think is in the word
 		char GuessChar = GuessCharacter();
 		// check if the character is in the word
-		boolean result = CheckCharacter(GuessChar);
+		boolean result = CheckCharacter(GuessChar, OurWords);
 		 // If it was right, add the players guess
 		 // display the new prompt
 		 
