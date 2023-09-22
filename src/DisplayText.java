@@ -4,7 +4,7 @@ public class DisplayText {
 	String OurPrompt;
 	public boolean CheckCharacter(char GuessChar, HiddenText OurWords)
 	{
-		 
+		 return false;
 	}
 	public char GuessCharacter() {
 		// Grab the string input
@@ -23,8 +23,8 @@ public class DisplayText {
 		}
 		 // prompt the user for a character they think is in the word
 		char GuessChar = GuessCharacter();
-		System.out.print(GuessChar);
 		// check if the character is in the word
+		boolean result = CheckCharacter(GuessChar);
 		 // If it was right, add the players guess
 		 // display the new prompt
 		 
