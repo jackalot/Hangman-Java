@@ -4,8 +4,14 @@ public class DisplayText {
 	String OurPrompt;
 	public boolean CheckCharacter(char GuessChar, HiddenText OurWords)
 	{
-		
-		 return false;
+		boolean result = false;
+		int index = -1;
+		index = OurWords.GetHiddenWord().indexOf(GuessChar);
+		if(index != -1)
+		{
+			result = true;
+		}
+		 return result;
 	}
 	public char GuessCharacter() {
 		// Grab the string input
@@ -26,8 +32,11 @@ public class DisplayText {
 		char GuessChar = GuessCharacter();
 		// check if the character is in the word
 		boolean result = CheckCharacter(GuessChar, OurWords);
+		if(result)
+		{
 		 // If it was right, add the players guess
 		 // display the new prompt
+		}
 		 
 	}
 }
