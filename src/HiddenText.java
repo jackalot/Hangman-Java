@@ -67,4 +67,8 @@ public void HideOurText() {
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
 		 CensorWord();
 	 }
+public void RevealHiddenWord() {
+	
 }
+}
+
