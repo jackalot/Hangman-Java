@@ -1,6 +1,6 @@
 import javax.swing.*;
 public class DisplayText {
-	char[] Guesses;
+	String Guesses = "Guesses: ";
 	String OurPrompt;
 	public boolean CheckCharacter(char GuessChar, HiddenText OurWords)
 	{
@@ -36,6 +36,10 @@ public class DisplayText {
 		{
 		 // If it was right, add the players guess
 		 // display the new prompt
+		}
+		else
+		{
+			Guesses += GuessChar + ", ";
 		}
 		 
 	}
