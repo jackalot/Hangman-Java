@@ -30,12 +30,13 @@ public class DisplayText {
 		}
 		 // prompt the user for a character they think is in the word
 		char GuessChar = GuessCharacter();
-		// check if the character is in the word
+		// check if the character is in the word at all
 		boolean result = CheckCharacter(GuessChar, OurWords);
 		if(result)
 		{
-		 // If it was right, add the players guess
-		 // display the new prompt
+			// find all instances of the players guessed character
+			// Fill in each blank with the letter
+			
 		}
 		else
 		{
