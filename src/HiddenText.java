@@ -85,12 +85,27 @@ public class HiddenText {
 			}
 			loops += 1;
 		}
+		HiddenWord = newHiddenWord;
 	}
 
 	// This will make it so the user can guess the next identical character
 	// ie. the "n"'s and "a"'s in banana
 	public void HideFormattedWord(char ch, int index) {
-		String newString = FormattedWord.substring(0, index) + ch + FormattedWord.substring(FormattedWord.length());
-		FormattedWord = newString;
+		String newFormatted = "";
+		// to check the index variable
+		int loops = 0;
+		// loop through the whole string and check what
+		// needs to be added to the new formatted word
+		for (char x : FormattedWord.toCharArray()) {
+			// found the character, reveal it
+			if (x == '_' && loops == index) {
+				newFormatted += ch;
+			} else {
+				newFormatted += "* ";
+			}
+			loops += 1;
+		}
+		FormattedWord = newFormatted;
+
 	}
 }
