@@ -7,7 +7,7 @@ public class HiddenText {
 	 private String OurWord = "Sample text";
 	 private String HiddenWord = "";
 	// This string will be a copy of OurWord but formatted like HiddenWord is
-	 private String FormattedWord;
+	 private String FormattedWord = "";
 	 private List<String> FindTheFile() {
 		 List<String> StoredWords = new ArrayList<String>();
 		 try
@@ -69,16 +69,13 @@ public void HideOurText() {
 	 }
 // This will happen when the user guesses a character right
 public void RevealHiddenWord(char ch, int index) {
-	char[] chars = HiddenWord.toCharArray();
-    chars[index] = ch;
-    HiddenWord = chars.toString();
+	
 }
 //This will make it so the user can guess the next identical character
 //ie. the "n"'s and "a"'s in banana
 public void HideFormattedWord(char ch, int index) {
-	char[] chars = FormattedWord.toCharArray();
- chars[index] = '_';
- FormattedWord = chars.toString();
+	String newString = FormattedWord.substring(0,index)+ch+FormattedWord.substring(FormattedWord.length());
+	FormattedWord = newString;
 }
 }
 
