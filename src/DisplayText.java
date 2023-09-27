@@ -36,13 +36,15 @@ public class DisplayText {
 		boolean result = CheckCharacter(GuessChar, OurWords);
 		if(result)
 		{
+			int failsafe = -2;
 			// find all instances of the players guessed character
-			while(OurWords.GetFormattedWord().indexOf(GuessChar) != -1)
+			while(OurWords.GetFormattedWord().indexOf(GuessChar) != -1 || failsafe > 0)
 			{
 				int index = OurWords.GetFormattedWord().indexOf(GuessChar);
 				OurWords.HideFormattedWord(GuessChar, index);
 				OurWords.RevealHiddenWord(GuessChar, index);
 				System.out.println(OurWords.GetHiddenWord());
+				failsafe++;
 			}
 			// Fill in each blank with the letter
 			
