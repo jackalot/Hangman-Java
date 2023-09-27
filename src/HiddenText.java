@@ -74,6 +74,17 @@ public void RevealHiddenWord(char ch, int index) {
 	int loops = 0;
 	// loop through the whole string and check what
 	// needs to be added to the new hidden word
+	for(char x: HiddenWord.toCharArray()) {
+		if(x == '_' && loops == index)
+		{
+		newHiddenWord += ch;	
+		}
+		else
+		{
+		newHiddenWord += "_ ";
+		}
+		loops += 1;
+	}	
 }
 //This will make it so the user can guess the next identical character
 //ie. the "n"'s and "a"'s in banana
