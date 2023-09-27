@@ -6,11 +6,13 @@ public class DisplayText {
 	{
 		boolean result = false;
 		int index = -1;
-		index = OurWords.GetHiddenWord().indexOf(GuessChar);
+		index = OurWords.GetFormattedWord().indexOf(GuessChar);
 		if(index != -1)
 		{
 			result = true;
 		}
+		
+		
 		 return result;
 	}
 	public char GuessCharacter() {
@@ -34,9 +36,9 @@ public class DisplayText {
 		boolean result = CheckCharacter(GuessChar, OurWords);
 		if(result)
 		{
-			System.out.println("test");
+			System.out.println("Char is: " + GuessChar + ", result is: " + result );
 			// find all instances of the players guessed character
-			while(OurWords.GetHiddenWord().indexOf(GuessChar) > -1)
+			while(OurWords.GetFormattedWord().indexOf(GuessChar) > -1)
 			{
 				int index = OurWords.GetHiddenWord().indexOf(GuessChar);
 				OurWords.RevealHiddenWord(GuessChar, index);
