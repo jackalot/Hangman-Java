@@ -38,7 +38,9 @@ public class DisplayText {
 			// find all instances of the players guessed character
 			while(OurWords.GetHiddenWord().indexOf(GuessChar) > -1)
 			{
-				
+				int index = OurWords.GetHiddenWord().indexOf(GuessChar);
+				OurWords.RevealHiddenWord(GuessChar, index);
+				System.out.println(OurWords.GetHiddenWord());
 			}
 			// Fill in each blank with the letter
 			
