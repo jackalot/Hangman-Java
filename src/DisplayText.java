@@ -37,12 +37,9 @@ public class DisplayText {
 		if(result)
 		{
 			// find all instances of the players guessed character
-			System.out.println("HiddenText has the length of " + OurWords.GetHiddenWord().length());
-			System.out.println("Formatted has the length of " + OurWords.GetFormattedWord().length());
-			System.out.println(OurWords.GetFormattedWord().indexOf(GuessChar));
 			while(OurWords.GetFormattedWord().indexOf(GuessChar) != -1)
 			{
-				int index = OurWords.GetHiddenWord().indexOf(GuessChar);
+				int index = OurWords.GetFormattedWord().indexOf(GuessChar);
 				OurWords.HideFormattedWord(GuessChar, index);
 				OurWords.RevealHiddenWord(GuessChar, index);
 				System.out.println(OurWords.GetHiddenWord());
