@@ -67,10 +67,18 @@ public void HideOurText() {
 		 //_ _ _ _ _ _ _ _	 _ _ _   _ _ _ 
 		 CensorWord();
 	 }
+// This will happen when the user guesses a character right
 public void RevealHiddenWord(char ch, int index) {
 	char[] chars = HiddenWord.toCharArray();
     chars[index] = ch;
     HiddenWord = chars.toString();
+}
+//This will make it so the user can guess the next identical character
+//ie. the "n"'s and "a"'s in banana
+public void HideFormattedWord(char ch, int index) {
+	char[] chars = FormattedWord.toCharArray();
+ chars[index] = '_';
+ FormattedWord = chars.toString();
 }
 }
 
