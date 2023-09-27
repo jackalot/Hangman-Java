@@ -36,11 +36,14 @@ public class DisplayText {
 		boolean result = CheckCharacter(GuessChar, OurWords);
 		if(result)
 		{
-			System.out.println("Char is: " + GuessChar + ", result is: " + result );
 			// find all instances of the players guessed character
-			while(OurWords.GetFormattedWord().indexOf(GuessChar) > -1)
+			System.out.println("HiddenText has the length of " + OurWords.GetHiddenWord().length());
+			System.out.println("Formatted has the length of " + OurWords.GetFormattedWord().length());
+			System.out.println(OurWords.GetFormattedWord().indexOf(GuessChar));
+			while(OurWords.GetFormattedWord().indexOf(GuessChar) != -1)
 			{
 				int index = OurWords.GetHiddenWord().indexOf(GuessChar);
+				OurWords.HideFormattedWord(GuessChar, index);
 				OurWords.RevealHiddenWord(GuessChar, index);
 				System.out.println(OurWords.GetHiddenWord());
 			}
