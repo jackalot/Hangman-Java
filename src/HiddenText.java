@@ -81,10 +81,22 @@ public class HiddenText {
 			if (x == '_' && loops == index) {
 				newHiddenWord += ch;
 			} else {
-				newHiddenWord += "_ ";
+				if(HiddenWord.contains("\n"))
+				{
+					if(x != '_' && loops == index && x != ' ')
+					{
+						newHiddenWord += "/n";
+					}
+				}
+				else
+				{
+					newHiddenWord += "_ ";
+				}
+					
 			}
 			loops += 1;
 		}
+		HiddenWord = "";
 		HiddenWord = newHiddenWord;
 	}
 
@@ -97,11 +109,11 @@ public class HiddenText {
 		// loop through the whole string and check what
 		// needs to be added to the new formatted word
 		for (char x : FormattedWord.toCharArray()) {
-			// found the character, reveal it
-			if (x == '_' && loops == index) {
-				newFormatted += ch;
+			// found the character, hide it
+			if (loops == index) {
+				newFormatted += "8";
 			} else {
-				newFormatted += "* ";
+				newFormatted += x;
 			}
 			loops += 1;
 		}
