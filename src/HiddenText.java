@@ -68,7 +68,9 @@ public void HideOurText() {
 		 CensorWord();
 	 }
 public void RevealHiddenWord(char ch, int index) {
-    
+	char[] chars = HiddenWord.toCharArray();
+    chars[index] = ch;
+    HiddenWord = chars.toString();
 }
 }
 
