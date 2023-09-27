@@ -34,7 +34,12 @@ public class DisplayText {
 		boolean result = CheckCharacter(GuessChar, OurWords);
 		if(result)
 		{
+			System.out.println("test");
 			// find all instances of the players guessed character
+			while(OurWords.GetHiddenWord().indexOf(GuessChar) > -1)
+			{
+				
+			}
 			// Fill in each blank with the letter
 			
 		}
