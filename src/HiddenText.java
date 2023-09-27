@@ -69,7 +69,11 @@ public void HideOurText() {
 	 }
 // This will happen when the user guesses a character right
 public void RevealHiddenWord(char ch, int index) {
-	
+	String newHiddenWord = "";
+	// to check the index variable
+	int loops = 0;
+	// loop through the whole string and check what
+	// needs to be added to the new hidden word
 }
 //This will make it so the user can guess the next identical character
 //ie. the "n"'s and "a"'s in banana
