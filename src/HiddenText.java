@@ -11,8 +11,9 @@ public class HiddenText {
 	private String FormattedWord = "";
 	// Finds a new word for us from the "Words to Hide" file
 	private void FindNewWord() {
-		GetFile file = new GetFile();
-		List<String> StoredWords = file.FindTheFile();
+		GetFile fileObj = new GetFile();
+		File file = fileObj.FindTheFile();
+		List<String> StoredWords = fileObj.ScanTheFile();
 		// Store our ArrayList in a regular Array, according to the list size
 		String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
 		OurWord = PossibleWords[(int) (Math.random() * PossibleWords.length)];
