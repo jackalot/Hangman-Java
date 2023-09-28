@@ -9,27 +9,10 @@ public class HiddenText {
 	private String HiddenWord = "";
 	// This string will be a copy of OurWord but formatted like HiddenWord is
 	private String FormattedWord = "";
-
-	private List<String> FindTheFile() {
-		List<String> StoredWords = new ArrayList<String>();
-		try {
-			File wordObj = new File("src/WordsToHide"); // Grab the file
-			Scanner myReader = new Scanner(wordObj); // Start scanning it
-			while (myReader.hasNextLine()) // while it has more lines to read
-			{
-				String data = myReader.nextLine(); // the next line gets stored to data
-				StoredWords.add(data);
-			}
-			myReader.close();
-		} catch (FileNotFoundException e) {
-			System.out.print(e);
-		}
-		return StoredWords;
-	}
-
 	// Finds a new word for us from the "Words to Hide" file
 	private void FindNewWord() {
-		List<String> StoredWords = FindTheFile();
+		GetFile file = new GetFile();
+		List<String> StoredWords = file.FindTheFile();
 		// Store our ArrayList in a regular Array, according to the list size
 		String[] PossibleWords = StoredWords.toArray(new String[StoredWords.size()]);
 		OurWord = PossibleWords[(int) (Math.random() * PossibleWords.length)];
